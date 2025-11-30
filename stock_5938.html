@@ -19,7 +19,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-11-30 14:51
+          最終更新: 2025-11-30 15:07
         </span>
       </div>
     </nav>
@@ -302,6 +302,85 @@
   };
 
   const data = [traceCandle, traceSMA5, traceSMA25, traceSMA75, traceADX, tracePlusDI, traceMinusDI];
+
+  // 背景色の設定 (トレンド・レンジ判定)
+  const shapes = [];
+  let startIndex = 0;
+  let currentType = null; // 'up', 'down', 'range', null
+
+  // ADXの閾値
+  const ADX_THRESHOLD = 25;
+
+  for (let i = 0; i < chartData.dates.length; i++) {
+    const adx = chartData.adx[i];
+    const pdi = chartData.plus_di[i];
+    const mdi = chartData.minus_di[i];
+    
+    let type = 'range';
+    
+    // データがない場合はnull
+    if (adx === null || adx === undefined) {
+        type = null;
+    } else if (adx >= ADX_THRESHOLD) {
+      if (pdi > mdi) {
+        type = 'up';
+      } else {
+        type = 'down';
+      }
+    }
+
+    if (i === 0) {
+      currentType = type;
+      startIndex = i;
+    } else if (type !== currentType) {
+      // 状態が変わったのでshapeを追加
+      if (currentType !== null) {
+        let color = 'rgba(0,0,0,0)';
+        if (currentType === 'up') color = 'rgba(255, 0, 0, 0.05)'; // 薄い赤 (上昇トレンド)
+        if (currentType === 'down') color = 'rgba(0, 0, 255, 0.05)'; // 薄い青 (下降トレンド)
+        if (currentType === 'range') color = 'rgba(255, 255, 0, 0.1)'; // 薄い黄色 (レンジ)
+
+        shapes.push({
+          type: 'rect',
+          xref: 'x',
+          yref: 'paper',
+          x0: chartData.dates[startIndex],
+          x1: chartData.dates[i],
+          y0: 0,
+          y1: 1,
+          fillcolor: color,
+          line: { width: 0 },
+          layer: 'below'
+        });
+      }
+      currentType = type;
+      startIndex = i;
+    }
+  }
+  
+  // 最後の区間を追加
+  if (currentType !== null) {
+    let color = 'rgba(0,0,0,0)';
+    if (currentType === 'up') color = 'rgba(255, 0, 0, 0.05)';
+    if (currentType === 'down') color = 'rgba(0, 0, 255, 0.05)';
+    if (currentType === 'range') color = 'rgba(255, 255, 0, 0.1)';
+
+    shapes.push({
+      type: 'rect',
+      xref: 'x',
+      yref: 'paper',
+      x0: chartData.dates[startIndex],
+      x1: chartData.dates[chartData.dates.length - 1],
+      y0: 0,
+      y1: 1,
+      fillcolor: color,
+      line: { width: 0 },
+      layer: 'below'
+    });
+  }
+
+  // layoutに追加
+  layout.shapes = shapes;
 
   Plotly.newPlot('mainChart', data, layout);
 </script>
