@@ -49,7 +49,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-12-02 19:08
+          最終更新: 2025-12-02 21:09
         </span>
       </div>
     </nav>
@@ -140,7 +140,7 @@
       </div>
       <div class="col-6 col-md-3 border-end">
         <div class="text-muted" style="font-size: 0.75rem;">Stoch %K(14)</div>
-        <div class="fs-6 fw-bold">86.19</div>
+        <div class="fs-6 fw-bold text-success">86.19</div>
       </div>
       <div class="col-6 col-md-3 border-end">
         <div class="text-muted" style="font-size: 0.75rem;">BB幅</div>
@@ -148,7 +148,7 @@
       </div>
       <div class="col-6 col-md-3">
         <div class="text-muted" style="font-size: 0.75rem;">ストキャスティクス %K(60)</div>
-        <div class="fs-6 fw-bold">88.85</div>
+        <div class="fs-6 fw-bold text-success">88.85</div>
       </div>
     </div>
   </div>
@@ -611,8 +611,7 @@
   // モバイルでのピンチズームを有効にする設定
   const config = {
     responsive: true,
-    scrollZoom: true,
-    displayModeBar: false  // モードバーを非表示（オプション）
+    scrollZoom: true
   };
 
   Plotly.newPlot('mainChart', data, layout, config);
