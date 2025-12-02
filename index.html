@@ -16,6 +16,16 @@
       .card { margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
       .stock-header { background-color: #fff; padding: 20px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
       .signal-badge { font-size: 0.9em; margin-right: 5px; }
+
+      /* スマホ用カスタムフォントサイズ */
+      @media (max-width: 576px) {
+        body {
+          font-size: 8px;  /* デフォルトは14px */
+        }
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 1.1em;  /* 見出しも相対的に調整 */
+        }
+      }
     </style>
   </head>
   <body>
@@ -23,7 +33,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-12-02 03:17
+          最終更新: 2025-12-02 12:42
         </span>
       </div>
     </nav>
