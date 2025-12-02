@@ -36,6 +36,11 @@
         .card-body {
           padding: 0.5rem;  /* カード内のパディングを小さく */
         }
+        /* 詳細ボタンを小さく */
+        .btn {
+          font-size: 0.6rem;  /* フォントサイズをさらに小さく */
+          padding: 0.15rem 0.3rem;  /* パディングを最小限に */
+        }
       }
     </style>
   </head>
@@ -44,7 +49,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-12-02 17:14
+          最終更新: 2025-12-02 18:25
         </span>
       </div>
     </nav>
@@ -114,7 +119,7 @@
         <div class="fs-6 fw-bold">44.01</div>
       </div>
       <div class="col-6 col-md-3 border-end">
-        <div class="text-muted" style="font-size: 0.75rem;">Stoch %K</div>
+        <div class="text-muted" style="font-size: 0.75rem;">Stoch %K(14)</div>
         <div class="fs-6 fw-bold">40.83</div>
       </div>
       <div class="col-6 col-md-3 border-end">
@@ -122,7 +127,7 @@
         <div class="fs-6 fw-bold">-</div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="text-muted" style="font-size: 0.75rem;">価格位置</div>
+        <div class="text-muted" style="font-size: 0.75rem;">ストキャスティクス %K(60)</div>
         <div class="fs-6 fw-bold">28.42</div>
       </div>
     </div>
@@ -583,7 +588,14 @@
   // layoutに追加
   layout.shapes = shapes;
 
-  Plotly.newPlot('mainChart', data, layout);
+  // モバイルでのピンチズームを有効にする設定
+  const config = {
+    responsive: true,
+    scrollZoom: true,
+    displayModeBar: false  // モードバーを非表示（オプション）
+  };
+
+  Plotly.newPlot('mainChart', data, layout, config);
 </script>
 
     </div>

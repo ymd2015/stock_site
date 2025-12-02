@@ -39,6 +39,11 @@
         .card-body {
           padding: 0.5rem;  /* カード内のパディングを小さく */
         }
+        /* 詳細ボタンを小さく */
+        .btn {
+          font-size: 0.6rem;  /* フォントサイズをさらに小さく */
+          padding: 0.15rem 0.3rem;  /* パディングを最小限に */
+        }
       }
     </style>
   </head>
@@ -47,7 +52,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-12-02 17:14
+          最終更新: 2025-12-02 18:25
         </span>
       </div>
     </nav>
@@ -70,13 +75,13 @@
           <tr>
             <th>コード</th>
             <th>銘柄名</th>
-            <th>優待価値</th>
             <th>現在値</th>
             <th>配当利回り</th>
-            <th>優待利回り</th>
-            <th>総合利回り</th>
             <th>信用倍率</th>
             <th>相場判定</th>
+            <th>ストキャ%K(14)</th>
+            <th>ストキャ%D(14)</th>
+            <th>ストキャ%K(60)</th>
             <th>シグナル</th>
             <th>詳細</th>
           </tr>
@@ -86,10 +91,7 @@
           <tr>
             <td>7267</td>
             <td>本田技研</td>
-            <td data-order="0.0">-</td>
             <td>1,515</td>
-            <td data-order="4.56">4.56%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.56">4.56%</td>
             <td data-order="16.64">16.64</td>
             <td>
@@ -97,6 +99,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:10)</span>
               
             </td>
+            <td data-order="49.71">49.7</td>
+            <td data-order="69.35">69.3</td>
+            <td data-order="26.3">26.3</td>
             <td>
               
               
@@ -110,10 +115,7 @@
           <tr>
             <td>8306</td>
             <td>三菱UFJ</td>
-            <td data-order="0.0">-</td>
             <td>2,524</td>
-            <td data-order="3.17">3.17%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.17">3.17%</td>
             <td data-order="10.5">10.50</td>
             <td>
@@ -121,6 +123,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:12)</span>
               
             </td>
+            <td data-order="80.28">80.3</td>
+            <td data-order="72.59">72.6</td>
+            <td data-order="89.51">89.5</td>
             <td>
               
               
@@ -136,10 +141,7 @@
           <tr>
             <td>9264</td>
             <td>ポエック</td>
-            <td data-order="0.0">-</td>
             <td>1,655</td>
-            <td data-order="4.43">4.43%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.43">4.43%</td>
             <td data-order="24.44">24.44</td>
             <td>
@@ -147,6 +149,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:13)</span>
               
             </td>
+            <td data-order="73.58">73.6</td>
+            <td data-order="79.67">79.7</td>
+            <td data-order="40.0">40.0</td>
             <td>
               
               
@@ -160,10 +165,7 @@
           <tr>
             <td>1928</td>
             <td>積水ハウス</td>
-            <td data-order="0.0">-</td>
             <td>3,430</td>
-            <td data-order="4.22">4.22%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.22">4.22%</td>
             <td data-order="8.94">8.94</td>
             <td>
@@ -171,6 +173,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:13)</span>
               
             </td>
+            <td data-order="58.69">58.7</td>
+            <td data-order="85.24">85.2</td>
+            <td data-order="74.04">74.0</td>
             <td>
               
               
@@ -186,10 +191,7 @@
           <tr>
             <td>9432</td>
             <td>NTT</td>
-            <td data-order="0.0">-</td>
             <td>156</td>
-            <td data-order="3.4">3.40%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.4">3.40%</td>
             <td data-order="24.65">24.65</td>
             <td>
@@ -197,6 +199,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:14)</span>
               
             </td>
+            <td data-order="92.98">93.0</td>
+            <td data-order="85.76">85.8</td>
+            <td data-order="44.8">44.8</td>
             <td>
               
               
@@ -212,10 +217,7 @@
           <tr>
             <td>5401</td>
             <td>日本製鉄</td>
-            <td data-order="0.0">-</td>
             <td>626</td>
-            <td data-order="3.84">3.84%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.84">3.84%</td>
             <td data-order="14.56">14.56</td>
             <td>
@@ -223,6 +225,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:12)</span>
               
             </td>
+            <td data-order="76.04">76.0</td>
+            <td data-order="82.89">82.9</td>
+            <td data-order="65.21">65.2</td>
             <td>
               
               
@@ -238,10 +243,7 @@
           <tr>
             <td>8593</td>
             <td>三菱HCキャピタル</td>
-            <td data-order="0.0">-</td>
             <td>1,250</td>
-            <td data-order="3.69">3.69%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.69">3.69%</td>
             <td data-order="12.37">12.37</td>
             <td>
@@ -249,6 +251,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:15)</span>
               
             </td>
+            <td data-order="71.9">71.9</td>
+            <td data-order="68.85">68.8</td>
+            <td data-order="78.28">78.3</td>
             <td>
               
               
@@ -264,10 +269,7 @@
           <tr>
             <td>2698</td>
             <td>キャンドゥ</td>
-            <td data-order="0.0">-</td>
             <td>3,505</td>
-            <td data-order="0.49">0.49%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.49">0.49%</td>
             <td data-order="1.05">1.05</td>
             <td>
@@ -275,6 +277,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:13)</span>
               
             </td>
+            <td data-order="40.0">40.0</td>
+            <td data-order="50.8">50.8</td>
+            <td data-order="39.29">39.3</td>
             <td>
               
               
@@ -288,10 +293,7 @@
           <tr>
             <td>3778</td>
             <td>さくらインターネット</td>
-            <td data-order="0.0">-</td>
             <td>3,165</td>
-            <td data-order="0.16">0.16%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.16">0.16%</td>
             <td data-order="0.97">0.97</td>
             <td>
@@ -299,6 +301,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:12)</span>
               
             </td>
+            <td data-order="72.3">72.3</td>
+            <td data-order="68.42">68.4</td>
+            <td data-order="29.22">29.2</td>
             <td>
               
               
@@ -314,10 +319,7 @@
           <tr>
             <td>8020</td>
             <td>兼松</td>
-            <td data-order="0.0">-</td>
             <td>3,360</td>
-            <td data-order="1.87">1.87%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="1.87">1.87%</td>
             <td data-order="2.48">2.48</td>
             <td>
@@ -325,6 +327,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:18)</span>
               
             </td>
+            <td data-order="57.93">57.9</td>
+            <td data-order="73.63">73.6</td>
+            <td data-order="71.81">71.8</td>
             <td>
               
               
@@ -340,10 +345,7 @@
           <tr>
             <td>5411</td>
             <td>JFE</td>
-            <td data-order="0.0">-</td>
             <td>1,889</td>
-            <td data-order="4.2">4.20%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.2">4.20%</td>
             <td data-order="9.73">9.73</td>
             <td>
@@ -351,6 +353,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:17)</span>
               
             </td>
+            <td data-order="87.21">87.2</td>
+            <td data-order="94.87">94.9</td>
+            <td data-order="86.41">86.4</td>
             <td>
               
               
@@ -364,10 +369,7 @@
           <tr>
             <td>7261</td>
             <td>小松製作所</td>
-            <td data-order="0.0">-</td>
             <td>1,116</td>
-            <td data-order="4.83">4.83%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.83">4.83%</td>
             <td data-order="1.51">1.51</td>
             <td>
@@ -375,6 +377,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:16)</span>
               
             </td>
+            <td data-order="80.0">80.0</td>
+            <td data-order="88.25">88.2</td>
+            <td data-order="84.93">84.9</td>
             <td>
               
               
@@ -390,10 +395,7 @@
           <tr>
             <td>9104</td>
             <td>商船三井</td>
-            <td data-order="0.0">-</td>
             <td>4,439</td>
-            <td data-order="4.52">4.52%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.52">4.52%</td>
             <td data-order="17.73">17.73</td>
             <td>
@@ -401,6 +403,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:15)</span>
               
             </td>
+            <td data-order="55.48">55.5</td>
+            <td data-order="51.18">51.2</td>
+            <td data-order="25.52">25.5</td>
             <td>
               
               
@@ -414,10 +419,7 @@
           <tr>
             <td>8725</td>
             <td>MS&AD</td>
-            <td data-order="0.0">-</td>
             <td>3,521</td>
-            <td data-order="3.45">3.45%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.45">3.45%</td>
             <td data-order="15.0">15.00</td>
             <td>
@@ -425,6 +427,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:18)</span>
               
             </td>
+            <td data-order="97.11">97.1</td>
+            <td data-order="93.7">93.7</td>
+            <td data-order="91.77">91.8</td>
             <td>
               
               
@@ -438,10 +443,7 @@
           <tr>
             <td>7203</td>
             <td>トヨタ自動車</td>
-            <td data-order="0.0">-</td>
             <td>3,045</td>
-            <td data-order="3.08">3.08%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.08">3.08%</td>
             <td data-order="3.57">3.57</td>
             <td>
@@ -449,6 +451,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:16)</span>
               
             </td>
+            <td data-order="32.14">32.1</td>
+            <td data-order="50.34">50.3</td>
+            <td data-order="67.97">68.0</td>
             <td>
               
               
@@ -462,10 +467,7 @@
           <tr>
             <td>9861</td>
             <td>吉野家</td>
-            <td data-order="0.0">-</td>
             <td>3,118</td>
-            <td data-order="0.7">0.70%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.7">0.70%</td>
             <td data-order="5.17">5.17</td>
             <td>
@@ -473,6 +475,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:20)</span>
               
             </td>
+            <td data-order="76.35">76.3</td>
+            <td data-order="84.67">84.7</td>
+            <td data-order="54.46">54.5</td>
             <td>
               
               
@@ -486,10 +491,7 @@
           <tr>
             <td>7453</td>
             <td>良品計画</td>
-            <td data-order="0.0">-</td>
             <td>3,020</td>
-            <td data-order="0.89">0.89%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.89">0.89%</td>
             <td data-order="6.73">6.73</td>
             <td>
@@ -497,6 +499,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:16)</span>
               
             </td>
+            <td data-order="46.3">46.3</td>
+            <td data-order="45.24">45.2</td>
+            <td data-order="61.94">61.9</td>
             <td>
               
               
@@ -510,10 +515,7 @@
           <tr>
             <td>8031</td>
             <td>三井物産</td>
-            <td data-order="0.0">-</td>
             <td>4,119</td>
-            <td data-order="2.93">2.93%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="2.93">2.93%</td>
             <td data-order="4.57">4.57</td>
             <td>
@@ -521,6 +523,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:19)</span>
               
             </td>
+            <td data-order="73.25">73.2</td>
+            <td data-order="87.16">87.2</td>
+            <td data-order="92.17">92.2</td>
             <td>
               
               
@@ -536,10 +541,7 @@
           <tr>
             <td>9434</td>
             <td>ソフトバンク</td>
-            <td data-order="0.0">-</td>
             <td>217</td>
-            <td data-order="3.93">3.93%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.93">3.93%</td>
             <td data-order="23.0">23.00</td>
             <td>
@@ -547,6 +549,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:18)</span>
               
             </td>
+            <td data-order="3.9">3.9</td>
+            <td data-order="24.89">24.9</td>
+            <td data-order="35.37">35.4</td>
             <td>
               
               
@@ -560,10 +565,7 @@
           <tr>
             <td>5711</td>
             <td>三菱マテリアル</td>
-            <td data-order="0.0">-</td>
             <td>3,116</td>
-            <td data-order="3.17">3.17%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.17">3.17%</td>
             <td data-order="13.43">13.43</td>
             <td>
@@ -571,6 +573,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:20)</span>
               
             </td>
+            <td data-order="86.89">86.9</td>
+            <td data-order="79.84">79.8</td>
+            <td data-order="94.99">95.0</td>
             <td>
               
               
@@ -586,10 +591,7 @@
           <tr>
             <td>5938</td>
             <td>LIXIL</td>
-            <td data-order="0.0">-</td>
             <td>1,826</td>
-            <td data-order="4.89">4.89%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.89">4.89%</td>
             <td data-order="24.6">24.60</td>
             <td>
@@ -597,6 +599,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:21)</span>
               
             </td>
+            <td data-order="84.17">84.2</td>
+            <td data-order="92.08">92.1</td>
+            <td data-order="59.65">59.6</td>
             <td>
               
               
@@ -610,17 +615,17 @@
           <tr>
             <td>9021</td>
             <td>JR西日本</td>
-            <td data-order="5000.0">5,000</td>
             <td>3,114</td>
             <td data-order="2.94">2.94%</td>
-            <td data-order="1.61">1.61%</td>
-            <td data-order="4.55">4.55%</td>
             <td data-order="84.1">84.10</td>
             <td>
               
                 <span class="badge bg-secondary">レンジ相場(ADX:19)</span>
               
             </td>
+            <td data-order="53.07">53.1</td>
+            <td data-order="59.11">59.1</td>
+            <td data-order="25.94">25.9</td>
             <td>
               
               
@@ -634,10 +639,7 @@
           <tr>
             <td>4088</td>
             <td>エア・ウォーター</td>
-            <td data-order="0.0">-</td>
             <td>2,170</td>
-            <td data-order="3.42">3.42%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.42">3.42%</td>
             <td data-order="12.6">12.60</td>
             <td>
@@ -645,6 +647,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:20)</span>
               
             </td>
+            <td data-order="37.59">37.6</td>
+            <td data-order="36.01">36.0</td>
+            <td data-order="21.36">21.4</td>
             <td>
               
               
@@ -658,10 +663,7 @@
           <tr>
             <td>8002</td>
             <td>丸紅</td>
-            <td data-order="0.0">-</td>
             <td>4,054</td>
-            <td data-order="2.46">2.46%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="2.46">2.46%</td>
             <td data-order="4.55">4.55</td>
             <td>
@@ -669,6 +671,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:22)</span>
               
             </td>
+            <td data-order="80.3">80.3</td>
+            <td data-order="89.14">89.1</td>
+            <td data-order="90.25">90.2</td>
             <td>
               
               
@@ -684,10 +689,7 @@
           <tr>
             <td>6156</td>
             <td>エーワン精密</td>
-            <td data-order="0.0">-</td>
             <td>1,762</td>
-            <td data-order="5.66">5.66%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="5.66">5.66%</td>
             <td data-order="999.99">999.99</td>
             <td>
@@ -695,6 +697,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:20)</span>
               
             </td>
+            <td data-order="70.59">70.6</td>
+            <td data-order="54.59">54.6</td>
+            <td data-order="53.57">53.6</td>
             <td>
               
               
@@ -708,10 +713,7 @@
           <tr>
             <td>7011</td>
             <td>三菱重工</td>
-            <td data-order="0.0">-</td>
             <td>3,861</td>
-            <td data-order="0.62">0.62%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.62">0.62%</td>
             <td data-order="12.59">12.59</td>
             <td>
@@ -719,6 +721,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:24)</span>
               
             </td>
+            <td data-order="13.79">13.8</td>
+            <td data-order="13.52">13.5</td>
+            <td data-order="34.5">34.5</td>
             <td>
               
               
@@ -732,10 +737,7 @@
           <tr>
             <td>8316</td>
             <td>三井住友FG</td>
-            <td data-order="0.0">-</td>
             <td>4,918</td>
-            <td data-order="3.29">3.29%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.29">3.29%</td>
             <td data-order="10.73">10.73</td>
             <td>
@@ -743,6 +745,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:26)</span>
               
             </td>
+            <td data-order="88.89">88.9</td>
+            <td data-order="88.37">88.4</td>
+            <td data-order="92.45">92.5</td>
             <td>
               
               
@@ -758,10 +763,7 @@
           <tr>
             <td>6965</td>
             <td>浜松ホトニクス</td>
-            <td data-order="0.0">-</td>
             <td>1,542</td>
-            <td data-order="2.43">2.43%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="2.43">2.43%</td>
             <td data-order="15.44">15.44</td>
             <td>
@@ -769,6 +771,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:23)</span>
               
             </td>
+            <td data-order="40.83">40.8</td>
+            <td data-order="43.84">43.8</td>
+            <td data-order="28.42">28.4</td>
             <td>
               
               
@@ -782,10 +787,7 @@
           <tr>
             <td>8001</td>
             <td>伊藤忠商事</td>
-            <td data-order="0.0">-</td>
             <td>9,203</td>
-            <td data-order="0.48">0.48%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.48">0.48%</td>
             <td data-order="3.61">3.61</td>
             <td>
@@ -793,6 +795,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:22)</span>
               
             </td>
+            <td data-order="41.83">41.8</td>
+            <td data-order="56.33">56.3</td>
+            <td data-order="64.85">64.8</td>
             <td>
               
               
@@ -808,10 +813,7 @@
           <tr>
             <td>5803</td>
             <td>フジクラ</td>
-            <td data-order="0.0">-</td>
             <td>16,600</td>
-            <td data-order="1.16">1.16%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="1.16">1.16%</td>
             <td data-order="3.68">3.68</td>
             <td>
@@ -819,6 +821,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:24)</span>
               
             </td>
+            <td data-order="2.74">2.7</td>
+            <td data-order="15.74">15.7</td>
+            <td data-order="43.92">43.9</td>
             <td>
               
               
@@ -832,10 +837,7 @@
           <tr>
             <td>7388</td>
             <td>FPパートナー</td>
-            <td data-order="0.0">-</td>
             <td>2,092</td>
-            <td data-order="4.45">4.45%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="4.45">4.45%</td>
             <td data-order="0.83">0.83</td>
             <td>
@@ -843,6 +845,9 @@
                 <span class="badge bg-primary">下降トレンド(強度:26)</span>
               
             </td>
+            <td data-order="0.0">0.0</td>
+            <td data-order="5.76">5.8</td>
+            <td data-order="21.64">21.6</td>
             <td>
               
               
@@ -858,10 +863,7 @@
           <tr>
             <td>6594</td>
             <td>ニデック</td>
-            <td data-order="0.0">-</td>
             <td>1,958</td>
-            <td data-order="2.0">2.00%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="2.0">2.00%</td>
             <td data-order="9.23">9.23</td>
             <td>
@@ -869,6 +871,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:24)</span>
               
             </td>
+            <td data-order="25.49">25.5</td>
+            <td data-order="19.85">19.9</td>
+            <td data-order="14.69">14.7</td>
             <td>
               
               
@@ -882,10 +887,7 @@
           <tr>
             <td>4755</td>
             <td>楽天</td>
-            <td data-order="0.0">-</td>
             <td>921</td>
-            <td data-order="0">0.00%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0">0.00%</td>
             <td data-order="5.2">5.20</td>
             <td>
@@ -893,6 +895,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:25)</span>
               
             </td>
+            <td data-order="23.88">23.9</td>
+            <td data-order="30.9">30.9</td>
+            <td data-order="35.18">35.2</td>
             <td>
               
               
@@ -906,10 +911,7 @@
           <tr>
             <td>8136</td>
             <td>サンリオ</td>
-            <td data-order="0.0">-</td>
             <td>5,315</td>
-            <td data-order="1.16">1.16%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="1.16">1.16%</td>
             <td data-order="24.63">24.63</td>
             <td>
@@ -917,6 +919,9 @@
                 <span class="badge bg-primary">下降トレンド(強度:32)</span>
               
             </td>
+            <td data-order="13.36">13.4</td>
+            <td data-order="26.68">26.7</td>
+            <td data-order="4.37">4.4</td>
             <td>
               
               
@@ -930,10 +935,7 @@
           <tr>
             <td>4661</td>
             <td>オリエンタルランド</td>
-            <td data-order="0.0">-</td>
             <td>2,921</td>
-            <td data-order="0.48">0.48%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.48">0.48%</td>
             <td data-order="4.09">4.09</td>
             <td>
@@ -941,6 +943,9 @@
                 <span class="badge bg-primary">下降トレンド(強度:35)</span>
               
             </td>
+            <td data-order="0.0">0.0</td>
+            <td data-order="19.66">19.7</td>
+            <td data-order="0.0">0.0</td>
             <td>
               
               
@@ -954,10 +959,7 @@
           <tr>
             <td>4751</td>
             <td>サイバーエージェント</td>
-            <td data-order="0.0">-</td>
             <td>1,371</td>
-            <td data-order="1.38">1.38%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="1.38">1.38%</td>
             <td data-order="26.68">26.68</td>
             <td>
@@ -965,6 +967,9 @@
                 <span class="badge bg-primary">下降トレンド(強度:35)</span>
               
             </td>
+            <td data-order="24.78">24.8</td>
+            <td data-order="29.0">29.0</td>
+            <td data-order="13.5">13.5</td>
             <td>
               
               
@@ -978,10 +983,7 @@
           <tr>
             <td>141A</td>
             <td>トライアルHD</td>
-            <td data-order="0.0">-</td>
             <td>2,418</td>
-            <td data-order="0.66">0.66%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.66">0.66%</td>
             <td data-order="1.33">1.33</td>
             <td>
@@ -989,6 +991,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:26)</span>
               
             </td>
+            <td data-order="73.45">73.5</td>
+            <td data-order="56.77">56.8</td>
+            <td data-order="63.32">63.3</td>
             <td>
               
               
@@ -1002,10 +1007,7 @@
           <tr>
             <td>7550</td>
             <td>ゼンショーHD</td>
-            <td data-order="0.0">-</td>
             <td>9,336</td>
-            <td data-order="0.76">0.76%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.76">0.76%</td>
             <td data-order="2.43">2.43</td>
             <td>
@@ -1013,6 +1015,9 @@
                 <span class="badge bg-secondary">レンジ相場(ADX:24)</span>
               
             </td>
+            <td data-order="69.84">69.8</td>
+            <td data-order="81.3">81.3</td>
+            <td data-order="32.73">32.7</td>
             <td>
               
               
@@ -1028,10 +1033,7 @@
           <tr>
             <td>9887</td>
             <td>松屋</td>
-            <td data-order="0.0">-</td>
             <td>6,270</td>
-            <td data-order="0.38">0.38%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.38">0.38%</td>
             <td data-order="3.31">3.31</td>
             <td>
@@ -1039,6 +1041,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:30)</span>
               
             </td>
+            <td data-order="66.67">66.7</td>
+            <td data-order="86.27">86.3</td>
+            <td data-order="40.91">40.9</td>
             <td>
               
               
@@ -1052,10 +1057,7 @@
           <tr>
             <td>7003</td>
             <td>三井E&S</td>
-            <td data-order="0.0">-</td>
             <td>6,283</td>
-            <td data-order="0.54">0.54%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.54">0.54%</td>
             <td data-order="5.91">5.91</td>
             <td>
@@ -1063,6 +1065,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:33)</span>
               
             </td>
+            <td data-order="62.75">62.8</td>
+            <td data-order="69.91">69.9</td>
+            <td data-order="79.64">79.6</td>
             <td>
               
               
@@ -1078,10 +1083,7 @@
           <tr>
             <td>1605</td>
             <td>INPEX</td>
-            <td data-order="0.0">-</td>
             <td>3,172</td>
-            <td data-order="3.1">3.10%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.1">3.10%</td>
             <td data-order="2.83">2.83</td>
             <td>
@@ -1089,6 +1091,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:36)</span>
               
             </td>
+            <td data-order="65.01">65.0</td>
+            <td data-order="82.96">83.0</td>
+            <td data-order="82.64">82.6</td>
             <td>
               
               
@@ -1104,10 +1109,7 @@
           <tr>
             <td>3197</td>
             <td>すかいらーくHD</td>
-            <td data-order="0.0">-</td>
             <td>3,743</td>
-            <td data-order="0.77">0.77%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="0.77">0.77%</td>
             <td data-order="0.18">0.18</td>
             <td>
@@ -1115,6 +1117,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:48)</span>
               
             </td>
+            <td data-order="86.19">86.2</td>
+            <td data-order="92.88">92.9</td>
+            <td data-order="88.85">88.8</td>
             <td>
               
               
@@ -1132,10 +1137,7 @@
           <tr>
             <td>4503</td>
             <td>アステラス製薬</td>
-            <td data-order="0.0">-</td>
             <td>1,992</td>
-            <td data-order="3.96">3.96%</td>
-            <td data-order="0.0">-%</td>
             <td data-order="3.96">3.96%</td>
             <td data-order="1.85">1.85</td>
             <td>
@@ -1143,6 +1145,9 @@
                 <span class="badge bg-danger">上昇トレンド(強度:51)</span>
               
             </td>
+            <td data-order="90.06">90.1</td>
+            <td data-order="90.08">90.1</td>
+            <td data-order="94.72">94.7</td>
             <td>
               
               
@@ -1189,8 +1194,8 @@ $(document).ready(function() {
         "pageLength": 50, // 1ページに50件表示
         "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "すべて"]],
         "columnDefs": [
-            { "orderable": false, "targets": [2, 3, 8, 9, 10] }, // 優待価値、現在値、相場判定、シグナル、詳細はソート不可
-            { "type": "num", "targets": [4, 5, 6, 7] } // 配当利回り、優待利回り、総合利回り、信用倍率は数値ソート
+            { "orderable": false, "targets": [2, 10] }, // 現在値、詳細はソート不可
+            { "type": "num", "targets": [3, 4, 6, 7, 8] } // 配当利回り、信用倍率、ストキャスティクスは数値ソート
         ]
     });
 });
