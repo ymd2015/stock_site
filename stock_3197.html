@@ -49,7 +49,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-12-05 17:59
+          最終更新: 2025-12-05 19:10
         </span>
       </div>
     </nav>
@@ -77,7 +77,7 @@
         <span class="badge bg-light text-dark border fs-7">PER 51.04倍</span>
         <span class="badge bg-light text-dark border fs-7">PBR 4.34倍</span>
         <span class="badge bg-light text-dark border fs-7">ROE 9.76%</span>
-        <span class="badge bg-light text-dark border fs-7">信用倍率 0.18倍</span>
+        <span class="badge bg-light text-dark border fs-7">信用倍率 0.15倍</span>
       </div>
       
       <div class="mt-1">
@@ -111,7 +111,7 @@
     <ul class="list-group list-group-flush">
       
       
-      <li class="list-group-item py-1 small"><span class="badge bg-warning text-dark me-1">戦略B</span> 【B】需給好転(0.2倍)・上昇トレンド</li>
+      <li class="list-group-item py-1 small"><span class="badge bg-warning text-dark me-1">戦略B</span> 【B】需給好転(0.1倍)・上昇トレンド</li>
       
       
       <li class="list-group-item py-1 small"><span class="badge bg-info text-dark me-1">戦略C</span> 【C】パーフェクトオーダー</li>
@@ -152,7 +152,7 @@
 
 <!-- 信用取引情報 -->
 <div class="card mb-2">
-  <div class="card-header py-1 small">信用取引詳細 (基準日: 2025-11-21)</div>
+  <div class="card-header py-1 small">信用取引詳細 (基準日: 2025-11-28)</div>
   <div class="card-body p-2">
     <div class="table-responsive">
       <table class="table table-bordered table-hover text-center align-middle table-sm">
@@ -167,64 +167,64 @@
         <tbody>
           <tr>
             <th class="small">信用倍率</th>
-            <td class="fw-bold small">0.18倍</td>
-            <td class="small">0.57倍</td>
-            <td class="small">0.06倍</td>
+            <td class="fw-bold small">0.15倍</td>
+            <td class="small">0.61倍</td>
+            <td class="small">0.04倍</td>
           </tr>
           <tr>
             <th class="small">信用圧力<br><span style="font-size: 0.75rem;">(前週)</span></th>
             <td class="small">
-              -0.78<br>
-              <span style="font-size: 0.75rem;">(-0.37)</span>
+              -1.08<br>
+              <span style="font-size: 0.75rem;">(-0.78)</span>
             </td>
             <td class="small">
-              -0.09<br>
-              <span style="font-size: 0.75rem;">(0.04)</span>
+              -0.1<br>
+              <span style="font-size: 0.75rem;">(-0.09)</span>
             </td>
             <td class="small">
-              -0.68<br>
-              <span style="font-size: 0.75rem;">(-0.4)</span>
+              -0.99<br>
+              <span style="font-size: 0.75rem;">(-0.68)</span>
             </td>
           </tr>
           <tr>
             <th class="small">売り残<br><span style="font-size: 0.75rem;">(前週比)</span></th>
             <td class="small">
-              2,337,100<br>
+              3,154,500<br>
               <span class="text-success">
-                +838,400
+                +817,400
               </span>
             </td>
             <td class="small">
-              541,000<br>
+              610,500<br>
               <span class="text-success">
-                +262,600
+                +69,500
               </span>
             </td>
             <td class="small">
-              1,796,100<br>
+              2,544,000<br>
               <span class="text-success">
-                +575,800
+                +747,900
               </span>
             </td>
           </tr>
           <tr>
             <th class="small">買い残<br><span style="font-size: 0.75rem;">(前週比)</span></th>
             <td class="small">
-              410,300<br>
-              <span class="text-success">
-                -179,500
+              465,700<br>
+              <span class="text-danger">
+                +55,400
               </span>
             </td>
             <td class="small">
-              306,500<br>
-              <span class="text-success">
-                -61,500
+              372,700<br>
+              <span class="text-danger">
+                +66,200
               </span>
             </td>
             <td class="small">
-              103,800<br>
+              93,000<br>
               <span class="text-success">
-                -118,000
+                -10,800
               </span>
             </td>
           </tr>
@@ -250,9 +250,9 @@
     increasing: {line: {color: 'red'}, fillcolor: 'red'},
     decreasing: {line: {color: 'green'}, fillcolor: 'green'},
     xaxis: 'x',
-    yaxis: 'y'
+    yaxis: 'y',
+    showlegend: false
   };
-
   // ローソク足
   const traceCandle = {
     x: chartData.dates.map((d, i) => i),
@@ -265,7 +265,8 @@
     increasing: {line: {color: 'red'}, fillcolor: 'red'},
     decreasing: {line: {color: 'green'}, fillcolor: 'green'},
     xaxis: 'x',
-    yaxis: 'y4'
+    yaxis: 'y4',
+    showlegend: false
   };
 
   // 移動平均線
@@ -362,7 +363,6 @@
       yaxis: 'y4'
     });
   });
-
   // ADX (サブプロット)
   const traceADX = {
     x: chartData.dates.map((d, i) => i),
@@ -372,9 +372,9 @@
     name: 'ADX',
     line: {color: 'black', width: 1.5},
     xaxis: 'x',
-    yaxis: 'y2'
+    yaxis: 'y2',
+    showlegend: false
   };
-  
   const tracePlusDI = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.plus_di,
@@ -383,9 +383,9 @@
     name: '+DI',
     line: {color: 'red', width: 1, dash: 'dot'},
     xaxis: 'x',
-    yaxis: 'y2'
+    yaxis: 'y2',
+    showlegend: false
   };
-
   const traceMinusDI = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.minus_di,
@@ -394,9 +394,9 @@
     name: '-DI',
     line: {color: 'green', width: 1, dash: 'dot'},
     xaxis: 'x',
-    yaxis: 'y2'
+    yaxis: 'y2',
+    showlegend: false
   };
-
   // MACD (サブプロット)
   const traceMACD = {
     x: chartData.dates.map((d, i) => i),
@@ -406,9 +406,9 @@
     name: 'MACD',
     line: {color: '#FF6B6B', width: 1},
     xaxis: 'x',
-    yaxis: 'y3'
+    yaxis: 'y3',
+    showlegend: false
   };
-
   const traceMACDSignal = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.macd_signal,
@@ -417,9 +417,9 @@
     name: 'MACD Signal',
     line: {color: '#00FF00', width: 1},
     xaxis: 'x',
-    yaxis: 'y3'
+    yaxis: 'y3',
+    showlegend: false
   };
-
   const traceMACDHistogram = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.macd_histogram,
@@ -429,7 +429,8 @@
       color: chartData.macd_histogram.map(h => h >= 0 ? '#FF6B6B' : '#00FF00')
     },
     xaxis: 'x',
-    yaxis: 'y3'
+    yaxis: 'y3',
+    showlegend: false
   };
 
   // 過去のシグナル位置を表示
@@ -529,13 +530,15 @@
   });
 
   // レイアウト設定
+  const isMobile = window.innerWidth < 768;
+  const initialDays = isMobile ? 20 : 40;
   const layout = {
     dragmode: 'pan',
     showlegend: true,
     xaxis: {
       rangeslider: { visible: false },
       type: 'linear',
-      range: [Math.max(0, chartData.dates.length - 40), chartData.dates.length - 1]
+      range: [Math.max(0, chartData.dates.length - initialDays), chartData.dates.length - 1]
     },
     yaxis: {
       domain: [0.6, 1],

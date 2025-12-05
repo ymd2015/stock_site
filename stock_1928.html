@@ -49,7 +49,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">株式監視レポート</a>
         <span class="navbar-text text-light">
-          最終更新: 2025-12-05 17:59
+          最終更新: 2025-12-05 19:10
         </span>
       </div>
     </nav>
@@ -77,7 +77,7 @@
         <span class="badge bg-light text-dark border fs-7">PER 10.80倍</span>
         <span class="badge bg-light text-dark border fs-7">PBR 1.12倍</span>
         <span class="badge bg-light text-dark border fs-7">ROE 0.00%</span>
-        <span class="badge bg-light text-dark border fs-7">信用倍率 8.94倍</span>
+        <span class="badge bg-light text-dark border fs-7">信用倍率 9.20倍</span>
       </div>
       
       
@@ -129,7 +129,7 @@
 
 <!-- 信用取引情報 -->
 <div class="card mb-2">
-  <div class="card-header py-1 small">信用取引詳細 (基準日: 2025-11-21)</div>
+  <div class="card-header py-1 small">信用取引詳細 (基準日: 2025-11-28)</div>
   <div class="card-body p-2">
     <div class="table-responsive">
       <table class="table table-bordered table-hover text-center align-middle table-sm">
@@ -144,64 +144,64 @@
         <tbody>
           <tr>
             <th class="small">信用倍率</th>
-            <td class="fw-bold small">8.94倍</td>
-            <td class="small">4.89倍</td>
-            <td class="small">24.85倍</td>
+            <td class="fw-bold small">9.20倍</td>
+            <td class="small">6.11倍</td>
+            <td class="small">19.57倍</td>
           </tr>
           <tr>
             <th class="small">信用圧力<br><span style="font-size: 0.75rem;">(前週)</span></th>
             <td class="small">
               0.45<br>
-              <span style="font-size: 0.75rem;">(0.47)</span>
+              <span style="font-size: 0.75rem;">(0.45)</span>
             </td>
             <td class="small">
-              0.18<br>
-              <span style="font-size: 0.75rem;">(0.2)</span>
+              0.21<br>
+              <span style="font-size: 0.75rem;">(0.18)</span>
             </td>
             <td class="small">
-              0.27<br>
+              0.23<br>
               <span style="font-size: 0.75rem;">(0.27)</span>
             </td>
           </tr>
           <tr>
             <th class="small">売り残<br><span style="font-size: 0.75rem;">(前週比)</span></th>
             <td class="small">
-              107,600<br>
-              <span class="text-success">
-                +32,000
+              104,100<br>
+              <span class="text-danger">
+                -3,500
               </span>
             </td>
             <td class="small">
-              85,800<br>
-              <span class="text-success">
-                +27,900
+              80,200<br>
+              <span class="text-danger">
+                -5,600
               </span>
             </td>
             <td class="small">
-              21,800<br>
+              23,900<br>
               <span class="text-success">
-                +4,100
+                +2,100
               </span>
             </td>
           </tr>
           <tr>
             <th class="small">買い残<br><span style="font-size: 0.75rem;">(前週比)</span></th>
             <td class="small">
-              961,600<br>
+              957,700<br>
               <span class="text-success">
-                -8,400
+                -3,900
               </span>
             </td>
             <td class="small">
-              419,800<br>
-              <span class="text-success">
-                -13,100
-              </span>
-            </td>
-            <td class="small">
-              541,800<br>
+              489,900<br>
               <span class="text-danger">
-                +4,700
+                +70,100
+              </span>
+            </td>
+            <td class="small">
+              467,800<br>
+              <span class="text-success">
+                -74,000
               </span>
             </td>
           </tr>
@@ -227,9 +227,9 @@
     increasing: {line: {color: 'red'}, fillcolor: 'red'},
     decreasing: {line: {color: 'green'}, fillcolor: 'green'},
     xaxis: 'x',
-    yaxis: 'y'
+    yaxis: 'y',
+    showlegend: false
   };
-
   // ローソク足
   const traceCandle = {
     x: chartData.dates.map((d, i) => i),
@@ -242,7 +242,8 @@
     increasing: {line: {color: 'red'}, fillcolor: 'red'},
     decreasing: {line: {color: 'green'}, fillcolor: 'green'},
     xaxis: 'x',
-    yaxis: 'y4'
+    yaxis: 'y4',
+    showlegend: false
   };
 
   // 移動平均線
@@ -339,7 +340,6 @@
       yaxis: 'y4'
     });
   });
-
   // ADX (サブプロット)
   const traceADX = {
     x: chartData.dates.map((d, i) => i),
@@ -349,9 +349,9 @@
     name: 'ADX',
     line: {color: 'black', width: 1.5},
     xaxis: 'x',
-    yaxis: 'y2'
+    yaxis: 'y2',
+    showlegend: false
   };
-  
   const tracePlusDI = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.plus_di,
@@ -360,9 +360,9 @@
     name: '+DI',
     line: {color: 'red', width: 1, dash: 'dot'},
     xaxis: 'x',
-    yaxis: 'y2'
+    yaxis: 'y2',
+    showlegend: false
   };
-
   const traceMinusDI = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.minus_di,
@@ -371,9 +371,9 @@
     name: '-DI',
     line: {color: 'green', width: 1, dash: 'dot'},
     xaxis: 'x',
-    yaxis: 'y2'
+    yaxis: 'y2',
+    showlegend: false
   };
-
   // MACD (サブプロット)
   const traceMACD = {
     x: chartData.dates.map((d, i) => i),
@@ -383,9 +383,9 @@
     name: 'MACD',
     line: {color: '#FF6B6B', width: 1},
     xaxis: 'x',
-    yaxis: 'y3'
+    yaxis: 'y3',
+    showlegend: false
   };
-
   const traceMACDSignal = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.macd_signal,
@@ -394,9 +394,9 @@
     name: 'MACD Signal',
     line: {color: '#00FF00', width: 1},
     xaxis: 'x',
-    yaxis: 'y3'
+    yaxis: 'y3',
+    showlegend: false
   };
-
   const traceMACDHistogram = {
     x: chartData.dates.map((d, i) => i),
     y: chartData.macd_histogram,
@@ -406,7 +406,8 @@
       color: chartData.macd_histogram.map(h => h >= 0 ? '#FF6B6B' : '#00FF00')
     },
     xaxis: 'x',
-    yaxis: 'y3'
+    yaxis: 'y3',
+    showlegend: false
   };
 
   // 過去のシグナル位置を表示
@@ -506,13 +507,15 @@
   });
 
   // レイアウト設定
+  const isMobile = window.innerWidth < 768;
+  const initialDays = isMobile ? 20 : 40;
   const layout = {
     dragmode: 'pan',
     showlegend: true,
     xaxis: {
       rangeslider: { visible: false },
       type: 'linear',
-      range: [Math.max(0, chartData.dates.length - 40), chartData.dates.length - 1]
+      range: [Math.max(0, chartData.dates.length - initialDays), chartData.dates.length - 1]
     },
     yaxis: {
       domain: [0.6, 1],
