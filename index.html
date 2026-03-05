@@ -1,0 +1,3495 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>銘柄一覧 - 株式監視レポート</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    
+<!-- DataTables CSS -->
+<link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+    <style>
+      body { padding-top: 20px; background-color: #f8f9fa; }
+      .card { margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      .stock-header { background-color: #fff; padding: 20px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+      .signal-badge { font-size: 0.9em; margin-right: 5px; }
+
+      /* スマホ用カスタムフォントサイズ */
+      @media (max-width: 576px) {
+        body {
+          font-size: 8px;  /* デフォルトは14px */
+        }
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 1.1em;  /* 見出しも相対的に調整 */
+        }
+        /* 表のマージンとパディングを小さくして情報密度を上げる */
+        .table td, .table th {
+          padding: 0.1rem 0.2rem;  /* セルパディングを最小限に */
+        }
+        .card {
+          margin-bottom: 10px;  /* カード間のマージンを小さく */
+        }
+        .container {
+          padding-left: 5px;
+          padding-right: 5px;  /* コンテナのパディングを小さく */
+        }
+        .card-body {
+          padding: 0.5rem;  /* カード内のパディングを小さく */
+        }
+        /* 詳細ボタンを小さく */
+        .btn {
+          font-size: 0.6rem;  /* フォントサイズをさらに小さく */
+          padding: 0.15rem 0.3rem;  /* パディングを最小限に */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">株式監視レポート</a>
+        <span class="navbar-text text-light">
+          最終更新: 2026-03-05 17:02
+        </span>
+      </div>
+    </nav>
+    <div style="height: 60px;"></div>
+
+    <div class="container">
+      
+<div class="row mb-4">
+  <div class="col">
+    <h2>監視銘柄一覧</h2>
+    <p>全 62 銘柄</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="stockTable" class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>コード</th>
+            <th>銘柄名</th>
+            <th>現在値</th>
+            <th>配当利回り</th>
+            <th>過去5年平均</th>
+            <th>最高</th>
+            <th>最低</th>
+            <th>信用倍率</th>
+            <th>相場判定</th>
+            <th>%K 14</th>
+            <th>%D 14</th>
+            <th>%K 60</th>
+            <th>シグナル</th>
+            <th>タグ</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>4751</td>
+            <td>サイバーエージェント</td>
+            <td>1,228</td>
+            <td data-order="1.55" class="table-danger">1.55%</td>
+            <td data-order="1.25">1.25%</td>
+            <td data-order="1.94">1.94%</td>
+            <td data-order="0.49">0.49%</td>
+            <td data-order="19.02">19.02</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:14)</span>
+              
+            </td>
+            <td data-order="11.43" class="table-danger">11.4</td>
+            <td data-order="15.92" class="table-danger">15.9</td>
+            <td data-order="8.39" class="table-danger">8.4</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4751.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>141A</td>
+            <td>トライアルHD</td>
+            <td>3,995</td>
+            <td data-order="0.39" class="">0.39%</td>
+            <td data-order="0.65">0.65%</td>
+            <td data-order="0.7">0.70%</td>
+            <td data-order="0.6">0.60%</td>
+            <td data-order="1.59">1.59</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:46)</span>
+              
+            </td>
+            <td data-order="59.21" class="">59.2</td>
+            <td data-order="72.28" class="">72.3</td>
+            <td data-order="72.35" class="">72.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+                
+                  
+                    
+                      <span class="badge bg-success" title="黒三兵">↓黒三</span>
+                    
+                  
+                
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">成長</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_141A.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>1605</td>
+            <td>INPEX</td>
+            <td>4,161</td>
+            <td data-order="2.79" class="table-danger">2.79%</td>
+            <td data-order="2.47">2.47%</td>
+            <td data-order="3.39">3.39%</td>
+            <td data-order="1.62">1.62%</td>
+            <td data-order="12.85">12.85</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:28)</span>
+              
+            </td>
+            <td data-order="55.87" class="">55.9</td>
+            <td data-order="69.1" class="">69.1</td>
+            <td data-order="71.99" class="">72.0</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">鉱業</span>
+              
+                <span class="badge bg-light text-dark me-1">高配当</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_1605.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>1928</td>
+            <td>積水ハウス</td>
+            <td>3,565</td>
+            <td data-order="4.0" class="table-danger">4.00%</td>
+            <td data-order="2.31">2.31%</td>
+            <td data-order="2.73">2.73%</td>
+            <td data-order="1.83">1.83%</td>
+            <td data-order="5.31">5.31</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:32)</span>
+              
+            </td>
+            <td data-order="16.91" class="table-danger">16.9</td>
+            <td data-order="45.1" class="">45.1</td>
+            <td data-order="59.33" class="">59.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_1928.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>2432</td>
+            <td>ディーエヌエー</td>
+            <td>2,582</td>
+            <td data-order="2.52" class="table-danger">2.52%</td>
+            <td data-order="1.66">1.66%</td>
+            <td data-order="2.23">2.23%</td>
+            <td data-order="1.15">1.15%</td>
+            <td data-order="21.1">21.10</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:11)</span>
+              
+            </td>
+            <td data-order="23.84" class="">23.8</td>
+            <td data-order="51.51" class="">51.5</td>
+            <td data-order="58.41" class="">58.4</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+                
+                  
+                    
+                      <span class="badge bg-success" title="黒三兵">↓黒三</span>
+                    
+                  
+                
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_2432.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>2698</td>
+            <td>キャンドゥ</td>
+            <td>3,255</td>
+            <td data-order="0.54" class="table-danger">0.54%</td>
+            <td data-order="0.32">0.32%</td>
+            <td data-order="0.45">0.45%</td>
+            <td data-order="0.23">0.23%</td>
+            <td data-order="172.0">172.00</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:28)</span>
+              
+            </td>
+            <td data-order="4.2" class="table-danger">4.2</td>
+            <td data-order="2.54" class="table-danger">2.5</td>
+            <td data-order="4.2" class="table-danger">4.2</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_2698.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>2768</td>
+            <td>双日</td>
+            <td>6,346</td>
+            <td data-order="2.63" class="table-danger">2.63%</td>
+            <td data-order="2.58">2.58%</td>
+            <td data-order="3.64">3.64%</td>
+            <td data-order="1.91">1.91%</td>
+            <td data-order="14.29">14.29</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:50)</span>
+              
+            </td>
+            <td data-order="10.16" class="table-danger">10.2</td>
+            <td data-order="58.56" class="">58.6</td>
+            <td data-order="63.28" class="">63.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">商社</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_2768.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>2871</td>
+            <td>ニチレイ</td>
+            <td>2,060</td>
+            <td data-order="2.31" class="table-danger">2.31%</td>
+            <td data-order="1.08">1.08%</td>
+            <td data-order="1.34">1.34%</td>
+            <td data-order="0.92">0.92%</td>
+            <td data-order="0.39">0.39</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:40)</span>
+              
+            </td>
+            <td data-order="37.3" class="">37.3</td>
+            <td data-order="59.05" class="">59.0</td>
+            <td data-order="78.73" class="">78.7</td>
+            <td>
+              
+              
+                <span class="badge bg-warning text-dark" title="【B】需給好転(0.4倍)・上昇トレンド">B</span>
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">食品</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_2871.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>3197</td>
+            <td>すかいらーくHD</td>
+            <td>3,502</td>
+            <td data-order="0.74" class="table-danger">0.74%</td>
+            <td data-order="0.44">0.44%</td>
+            <td data-order="0.81">0.81%</td>
+            <td data-order="0.27">0.27%</td>
+            <td data-order="0.65">0.65</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:31)</span>
+              
+            </td>
+            <td data-order="37.53" class="">37.5</td>
+            <td data-order="37.81" class="">37.8</td>
+            <td data-order="61.55" class="">61.5</td>
+            <td>
+              
+              
+                <span class="badge bg-warning text-dark" title="【B】需給好転(0.7倍)・上昇トレンド">B</span>
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">外食</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_3197.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>3778</td>
+            <td>さくらインターネット</td>
+            <td>2,896</td>
+            <td data-order="0.18" class="">0.18%</td>
+            <td data-order="0.32">0.32%</td>
+            <td data-order="0.57">0.57%</td>
+            <td data-order="0.06">0.06%</td>
+            <td data-order="1.29">1.29</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:16)</span>
+              
+            </td>
+            <td data-order="15.15" class="table-danger">15.2</td>
+            <td data-order="40.02" class="">40.0</td>
+            <td data-order="52.38" class="">52.4</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_3778.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4063</td>
+            <td>信越化学</td>
+            <td>6,226</td>
+            <td data-order="1.79" class="table-danger">1.79%</td>
+            <td data-order="1.19">1.19%</td>
+            <td data-order="1.7">1.70%</td>
+            <td data-order="0.79">0.79%</td>
+            <td data-order="6.29">6.29</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:34)</span>
+              
+            </td>
+            <td data-order="59.05" class="">59.0</td>
+            <td data-order="79.29" class="">79.3</td>
+            <td data-order="77.29" class="">77.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">化学</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4063.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4088</td>
+            <td>エア・ウォーター</td>
+            <td>2,070</td>
+            <td data-order="3.69" class="table-danger">3.69%</td>
+            <td data-order="1.83">1.83%</td>
+            <td data-order="2.36">2.36%</td>
+            <td data-order="1.49">1.49%</td>
+            <td data-order="3.33">3.33</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:28)</span>
+              
+            </td>
+            <td data-order="12.0" class="table-danger">12.0</td>
+            <td data-order="22.37" class="">22.4</td>
+            <td data-order="12.0" class="table-danger">12.0</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4088.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4114</td>
+            <td>日本触媒</td>
+            <td>2,455</td>
+            <td data-order="4.15" class="table-danger">4.15%</td>
+            <td data-order="2.36">2.36%</td>
+            <td data-order="3.66">3.66%</td>
+            <td data-order="1.67">1.67%</td>
+            <td data-order="8.96">8.96</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:54)</span>
+              
+            </td>
+            <td data-order="13.62" class="table-danger">13.6</td>
+            <td data-order="52.19" class="">52.2</td>
+            <td data-order="80.16" class="table-success">80.2</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4114.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4503</td>
+            <td>アステラス製薬</td>
+            <td>2,384</td>
+            <td data-order="3.35" class="table-danger">3.35%</td>
+            <td data-order="2.06">2.06%</td>
+            <td data-order="2.69">2.69%</td>
+            <td data-order="1.52">1.52%</td>
+            <td data-order="1.49">1.49</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:35)</span>
+              
+            </td>
+            <td data-order="9.13" class="table-danger">9.1</td>
+            <td data-order="15.27" class="table-danger">15.3</td>
+            <td data-order="55.95" class="">56.0</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">高配当</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4503.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4507</td>
+            <td>塩野義製薬</td>
+            <td>3,440</td>
+            <td data-order="1.93" class="table-danger">1.93%</td>
+            <td data-order="1.17">1.17%</td>
+            <td data-order="1.51">1.51%</td>
+            <td data-order="0.79">0.79%</td>
+            <td data-order="4.04">4.04</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:48)</span>
+              
+            </td>
+            <td data-order="9.18" class="table-danger">9.2</td>
+            <td data-order="22.67" class="">22.7</td>
+            <td data-order="74.07" class="">74.1</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">医薬品</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4507.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4661</td>
+            <td>オリエンタルランド</td>
+            <td>2,748</td>
+            <td data-order="0.5" class="table-danger">0.50%</td>
+            <td data-order="0.14">0.14%</td>
+            <td data-order="0.24">0.24%</td>
+            <td data-order="0.06">0.06%</td>
+            <td data-order="2.95">2.95</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:17)</span>
+              
+            </td>
+            <td data-order="58.62" class="">58.6</td>
+            <td data-order="43.01" class="">43.0</td>
+            <td data-order="48.68" class="">48.7</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4661.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>4755</td>
+            <td>楽天</td>
+            <td>783</td>
+            <td data-order="0" class="">0.00%</td>
+            <td data-order="0.58">0.58%</td>
+            <td data-order="0.76">0.76%</td>
+            <td data-order="0.39">0.39%</td>
+            <td data-order="20.17">20.17</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:29)</span>
+              
+            </td>
+            <td data-order="7.37" class="table-danger">7.4</td>
+            <td data-order="5.54" class="table-danger">5.5</td>
+            <td data-order="5.91" class="table-danger">5.9</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_4755.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5019</td>
+            <td>出光興産</td>
+            <td>1,458</td>
+            <td data-order="2.59" class="table-danger">2.59%</td>
+            <td data-order="2.26">2.26%</td>
+            <td data-order="3.83">3.83%</td>
+            <td data-order="1.64">1.64%</td>
+            <td data-order="7.36">7.36</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:43)</span>
+              
+            </td>
+            <td data-order="12.34" class="table-danger">12.3</td>
+            <td data-order="48.36" class="">48.4</td>
+            <td data-order="59.11" class="">59.1</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+                
+                  
+                    
+                      <span class="badge bg-success" title="黒三兵">↓黒三</span>
+                    
+                  
+                
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">石油</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5019.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5020</td>
+            <td>ENEOS</td>
+            <td>1,408</td>
+            <td data-order="2.55" class="table-danger">2.55%</td>
+            <td data-order="2.22">2.22%</td>
+            <td data-order="2.88">2.88%</td>
+            <td data-order="1.6">1.60%</td>
+            <td data-order="5.11">5.11</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:44)</span>
+              
+            </td>
+            <td data-order="11.29" class="table-danger">11.3</td>
+            <td data-order="45.7" class="">45.7</td>
+            <td data-order="56.99" class="">57.0</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">石油</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5020.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5108</td>
+            <td>ブリヂストン</td>
+            <td>3,482</td>
+            <td data-order="3.73" class="table-danger">3.73%</td>
+            <td data-order="1.95">1.95%</td>
+            <td data-order="2.17">2.17%</td>
+            <td data-order="1.66">1.66%</td>
+            <td data-order="9.59">9.59</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:20)</span>
+              
+            </td>
+            <td data-order="6.27" class="table-danger">6.3</td>
+            <td data-order="23.08" class="">23.1</td>
+            <td data-order="17.62" class="table-danger">17.6</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">ゴム</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5108.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5401</td>
+            <td>日本製鉄</td>
+            <td>600</td>
+            <td data-order="3.97" class="">3.97%</td>
+            <td data-order="4.65">4.65%</td>
+            <td data-order="10.88">10.88%</td>
+            <td data-order="2.59">2.59%</td>
+            <td data-order="8.75">8.75</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:24)</span>
+              
+            </td>
+            <td data-order="7.98" class="table-danger">8.0</td>
+            <td data-order="6.65" class="table-danger">6.7</td>
+            <td data-order="12.57" class="table-danger">12.6</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5401.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5411</td>
+            <td>JFE</td>
+            <td>1,996</td>
+            <td data-order="4.07" class="table-danger">4.07%</td>
+            <td data-order="3.26">3.26%</td>
+            <td data-order="5.75">5.75%</td>
+            <td data-order="2.04">2.04%</td>
+            <td data-order="2.93">2.93</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:25)</span>
+              
+            </td>
+            <td data-order="6.35" class="table-danger">6.3</td>
+            <td data-order="5.59" class="table-danger">5.6</td>
+            <td data-order="22.42" class="">22.4</td>
+            <td>
+              
+                <span class="badge bg-success" title="【A】高配当(407.0%)・PBR割安・RSI底値">A</span>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5411.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5711</td>
+            <td>三菱マテリアル</td>
+            <td>5,270</td>
+            <td data-order="1.92" class="">1.92%</td>
+            <td data-order="1.93">1.93%</td>
+            <td data-order="2.68">2.68%</td>
+            <td data-order="1.28">1.28%</td>
+            <td data-order="2.81">2.81</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:48)</span>
+              
+            </td>
+            <td data-order="19.9" class="table-danger">19.9</td>
+            <td data-order="60.55" class="">60.5</td>
+            <td data-order="69.66" class="">69.7</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5711.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5803</td>
+            <td>フジクラ</td>
+            <td>26,320</td>
+            <td data-order="0.95" class="">0.95%</td>
+            <td data-order="1.44">1.44%</td>
+            <td data-order="1.98">1.98%</td>
+            <td data-order="0.66">0.66%</td>
+            <td data-order="3.58">3.58</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:42)</span>
+              
+            </td>
+            <td data-order="50.17" class="">50.2</td>
+            <td data-order="71.43" class="">71.4</td>
+            <td data-order="68.49" class="">68.5</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5803.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>5938</td>
+            <td>LIXIL</td>
+            <td>1,740</td>
+            <td data-order="5.2" class="table-danger">5.20%</td>
+            <td data-order="2.49">2.49%</td>
+            <td data-order="2.92">2.92%</td>
+            <td data-order="1.5">1.50%</td>
+            <td data-order="21.83">21.83</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:19)</span>
+              
+            </td>
+            <td data-order="9.38" class="table-danger">9.4</td>
+            <td data-order="6.87" class="table-danger">6.9</td>
+            <td data-order="8.39" class="table-danger">8.4</td>
+            <td>
+              
+                <span class="badge bg-success" title="【A】高配当(520.0%)・PBR割安・RSI底値">A</span>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_5938.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>6103</td>
+            <td>オークマ</td>
+            <td>4,100</td>
+            <td data-order="2.48" class="table-danger">2.48%</td>
+            <td data-order="1.5">1.50%</td>
+            <td data-order="2.02">2.02%</td>
+            <td data-order="0.73">0.73%</td>
+            <td data-order="1.61">1.61</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:28)</span>
+              
+            </td>
+            <td data-order="6.99" class="table-danger">7.0</td>
+            <td data-order="35.15" class="">35.1</td>
+            <td data-order="47.64" class="">47.6</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">機械</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_6103.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>6156</td>
+            <td>エーワン精密</td>
+            <td>1,989</td>
+            <td data-order="5.18" class="">5.18%</td>
+            <td data-order="6.1">6.10%</td>
+            <td data-order="7.6">7.60%</td>
+            <td data-order="4.75">4.75%</td>
+            <td data-order="999.99">999.99</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:30)</span>
+              
+            </td>
+            <td data-order="24.11" class="">24.1</td>
+            <td data-order="65.35" class="">65.3</td>
+            <td data-order="67.43" class="">67.4</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_6156.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>6594</td>
+            <td>ニデック</td>
+            <td>2,320</td>
+            <td data-order="1.65" class="table-danger">1.65%</td>
+            <td data-order="0.53">0.53%</td>
+            <td data-order="0.81">0.81%</td>
+            <td data-order="0.25">0.25%</td>
+            <td data-order="13.46">13.46</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:23)</span>
+              
+            </td>
+            <td data-order="47.74" class="">47.7</td>
+            <td data-order="25.15" class="">25.1</td>
+            <td data-order="63.85" class="">63.9</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">小型モーター</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_6594.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>6954</td>
+            <td>ファナック</td>
+            <td>6,253</td>
+            <td data-order="1.66" class="table-danger">1.66%</td>
+            <td data-order="1.19">1.19%</td>
+            <td data-order="1.41">1.41%</td>
+            <td data-order="1.09">1.09%</td>
+            <td data-order="5.77">5.77</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:15)</span>
+              
+            </td>
+            <td data-order="10.32" class="table-danger">10.3</td>
+            <td data-order="38.48" class="">38.5</td>
+            <td data-order="50.08" class="">50.1</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_6954.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>6965</td>
+            <td>浜松ホトニクス</td>
+            <td>2,019</td>
+            <td data-order="1.95" class="table-danger">1.95%</td>
+            <td data-order="0.78">0.78%</td>
+            <td data-order="1.34">1.34%</td>
+            <td data-order="0.31">0.31%</td>
+            <td data-order="14.55">14.55</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:26)</span>
+              
+            </td>
+            <td data-order="39.75" class="">39.8</td>
+            <td data-order="64.88" class="">64.9</td>
+            <td data-order="48.78" class="">48.8</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">成長期待</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_6965.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7003</td>
+            <td>三井E&S</td>
+            <td>6,959</td>
+            <td data-order="0.72" class="table-danger">0.72%</td>
+            <td data-order="0.64">0.64%</td>
+            <td data-order="1.23">1.23%</td>
+            <td data-order="0.27">0.27%</td>
+            <td data-order="5.27">5.27</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:27)</span>
+              
+            </td>
+            <td data-order="11.62" class="table-danger">11.6</td>
+            <td data-order="55.77" class="">55.8</td>
+            <td data-order="54.4" class="">54.4</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7003.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7011</td>
+            <td>三菱重工</td>
+            <td>4,769</td>
+            <td data-order="0.52" class="">0.52%</td>
+            <td data-order="1.01">1.01%</td>
+            <td data-order="1.62">1.62%</td>
+            <td data-order="0.31">0.31%</td>
+            <td data-order="7.75">7.75</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:27)</span>
+              
+            </td>
+            <td data-order="17.71" class="table-danger">17.7</td>
+            <td data-order="55.98" class="">56.0</td>
+            <td data-order="59.82" class="">59.8</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">重工</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7011.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7203</td>
+            <td>トヨタ自動車</td>
+            <td>3,481</td>
+            <td data-order="2.7" class="table-danger">2.70%</td>
+            <td data-order="1.55">1.55%</td>
+            <td data-order="2.04">2.04%</td>
+            <td data-order="1.2">1.20%</td>
+            <td data-order="2.9">2.90</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:27)</span>
+              
+            </td>
+            <td data-order="5.0" class="table-danger">5.0</td>
+            <td data-order="39.46" class="">39.5</td>
+            <td data-order="52.29" class="">52.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">自動車</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7203.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7261</td>
+            <td>小松製作所</td>
+            <td>1,200</td>
+            <td data-order="4.65" class="table-danger">4.65%</td>
+            <td data-order="2.43">2.43%</td>
+            <td data-order="3.35">3.35%</td>
+            <td data-order="1.64">1.64%</td>
+            <td data-order="4.03">4.03</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:22)</span>
+              
+            </td>
+            <td data-order="8.86" class="table-danger">8.9</td>
+            <td data-order="33.21" class="">33.2</td>
+            <td data-order="28.72" class="">28.7</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7261.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7267</td>
+            <td>本田技研</td>
+            <td>1,432</td>
+            <td data-order="4.83" class="table-danger">4.83%</td>
+            <td data-order="2.16">2.16%</td>
+            <td data-order="2.65">2.65%</td>
+            <td data-order="1.87">1.87%</td>
+            <td data-order="6.91">6.91</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:15)</span>
+              
+            </td>
+            <td data-order="3.52" class="table-danger">3.5</td>
+            <td data-order="5.71" class="table-danger">5.7</td>
+            <td data-order="2.34" class="table-danger">2.3</td>
+            <td>
+              
+                <span class="badge bg-success" title="【A】高配当(483.0%)・PBR割安・RSI底値">A</span>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7267.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7388</td>
+            <td>FPパートナー</td>
+            <td>2,347</td>
+            <td data-order="4.14" class="table-danger">4.14%</td>
+            <td data-order="1.81">1.81%</td>
+            <td data-order="2.15">2.15%</td>
+            <td data-order="1.16">1.16%</td>
+            <td data-order="1.96">1.96</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:27)</span>
+              
+            </td>
+            <td data-order="13.15" class="table-danger">13.2</td>
+            <td data-order="35.31" class="">35.3</td>
+            <td data-order="56.47" class="">56.5</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7388.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7453</td>
+            <td>良品計画</td>
+            <td>3,473</td>
+            <td data-order="0.8" class="">0.80%</td>
+            <td data-order="0.95">0.95%</td>
+            <td data-order="1.65">1.65%</td>
+            <td data-order="0.39">0.39%</td>
+            <td data-order="1.34">1.34</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:25)</span>
+              
+            </td>
+            <td data-order="31.68" class="">31.7</td>
+            <td data-order="56.23" class="">56.2</td>
+            <td data-order="80.58" class="table-success">80.6</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">小売</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7453.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7550</td>
+            <td>ゼンショーHD</td>
+            <td>9,782</td>
+            <td data-order="0.71" class="table-danger">0.71%</td>
+            <td data-order="0.39">0.39%</td>
+            <td data-order="0.45">0.45%</td>
+            <td data-order="0.31">0.31%</td>
+            <td data-order="1.04">1.04</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:38)</span>
+              
+            </td>
+            <td data-order="57.8" class="">57.8</td>
+            <td data-order="60.02" class="">60.0</td>
+            <td data-order="78.62" class="">78.6</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7550.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>7951</td>
+            <td>ヤマハ</td>
+            <td>1,121</td>
+            <td data-order="2.34" class="table-danger">2.34%</td>
+            <td data-order="0.91">0.91%</td>
+            <td data-order="1.34">1.34%</td>
+            <td data-order="0.51">0.51%</td>
+            <td data-order="4.6">4.60</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:25)</span>
+              
+            </td>
+            <td data-order="5.24" class="table-danger">5.2</td>
+            <td data-order="13.7" class="table-danger">13.7</td>
+            <td data-order="30.2" class="">30.2</td>
+            <td>
+              
+              
+              
+              
+                
+                  
+                    
+                      <span class="badge bg-danger" title="三空叩き込み">↑三空</span>
+                    
+                  
+                
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_7951.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8001</td>
+            <td>伊藤忠商事</td>
+            <td>2,108</td>
+            <td data-order="2.13" class="table-danger">2.13%</td>
+            <td data-order="1.58">1.58%</td>
+            <td data-order="2.05">2.05%</td>
+            <td data-order="1.2">1.20%</td>
+            <td data-order="7.41">7.41</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:25)</span>
+              
+            </td>
+            <td data-order="11.11" class="table-danger">11.1</td>
+            <td data-order="41.53" class="">41.5</td>
+            <td data-order="52.16" class="">52.2</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">商社</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8001.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8002</td>
+            <td>丸紅</td>
+            <td>5,452</td>
+            <td data-order="2.05" class="">2.05%</td>
+            <td data-order="2.39">2.39%</td>
+            <td data-order="3.39">3.39%</td>
+            <td data-order="1.37">1.37%</td>
+            <td data-order="4.08">4.08</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:38)</span>
+              
+            </td>
+            <td data-order="6.35" class="table-danger">6.3</td>
+            <td data-order="19.59" class="table-danger">19.6</td>
+            <td data-order="52.35" class="">52.4</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">商社</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8002.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8020</td>
+            <td>兼松</td>
+            <td>2,352</td>
+            <td data-order="2.74" class="table-danger">2.74%</td>
+            <td data-order="2.44">2.44%</td>
+            <td data-order="3.1">3.10%</td>
+            <td data-order="1.87">1.87%</td>
+            <td data-order="7.31">7.31</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:49)</span>
+              
+            </td>
+            <td data-order="32.02" class="">32.0</td>
+            <td data-order="63.35" class="">63.4</td>
+            <td data-order="76.31" class="">76.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">商社</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8020.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8031</td>
+            <td>三井物産</td>
+            <td>5,904</td>
+            <td data-order="2.16" class="table-danger">2.16%</td>
+            <td data-order="1.83">1.83%</td>
+            <td data-order="2.36">2.36%</td>
+            <td data-order="1.27">1.27%</td>
+            <td data-order="5.12">5.12</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:40)</span>
+              
+            </td>
+            <td data-order="20.39" class="">20.4</td>
+            <td data-order="65.6" class="">65.6</td>
+            <td data-order="71.95" class="">72.0</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">商社</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8031.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8058</td>
+            <td>三菱商事</td>
+            <td>5,114</td>
+            <td data-order="2.22" class="table-danger">2.22%</td>
+            <td data-order="1.87">1.87%</td>
+            <td data-order="2.39">2.39%</td>
+            <td data-order="1.06">1.06%</td>
+            <td data-order="2.17">2.17</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:55)</span>
+              
+            </td>
+            <td data-order="12.32" class="table-danger">12.3</td>
+            <td data-order="55.46" class="">55.5</td>
+            <td data-order="69.79" class="">69.8</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">商社</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8058.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8136</td>
+            <td>サンリオ</td>
+            <td>5,552</td>
+            <td data-order="1.23" class="table-danger">1.23%</td>
+            <td data-order="0.41">0.41%</td>
+            <td data-order="0.49">0.49%</td>
+            <td data-order="0.32">0.32%</td>
+            <td data-order="19.78">19.78</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:29)</span>
+              
+            </td>
+            <td data-order="46.19" class="">46.2</td>
+            <td data-order="48.89" class="">48.9</td>
+            <td data-order="52.0" class="">52.0</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8136.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8267</td>
+            <td>イオン</td>
+            <td>2,034</td>
+            <td data-order="1.3" class="table-danger">1.30%</td>
+            <td data-order="0.65">0.65%</td>
+            <td data-order="1.14">1.14%</td>
+            <td data-order="0.32">0.32%</td>
+            <td data-order="0.76">0.76</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:18)</span>
+              
+            </td>
+            <td data-order="18.18" class="table-danger">18.2</td>
+            <td data-order="10.9" class="table-danger">10.9</td>
+            <td data-order="10.24" class="table-danger">10.2</td>
+            <td>
+              
+              
+                <span class="badge bg-warning text-dark" title="【B】需給好転(0.8倍)">B</span>
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8267.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8306</td>
+            <td>三菱UFJ</td>
+            <td>2,735</td>
+            <td data-order="2.95" class="table-danger">2.95%</td>
+            <td data-order="1.99">1.99%</td>
+            <td data-order="2.77">2.77%</td>
+            <td data-order="1.41">1.41%</td>
+            <td data-order="9.71">9.71</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:23)</span>
+              
+            </td>
+            <td data-order="9.42" class="table-danger">9.4</td>
+            <td data-order="7.12" class="table-danger">7.1</td>
+            <td data-order="33.91" class="">33.9</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8306.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8316</td>
+            <td>三井住友FG</td>
+            <td>5,392</td>
+            <td data-order="3.02" class="table-danger">3.02%</td>
+            <td data-order="2.4">2.40%</td>
+            <td data-order="3.28">3.28%</td>
+            <td data-order="1.63">1.63%</td>
+            <td data-order="11.7">11.70</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:26)</span>
+              
+            </td>
+            <td data-order="8.52" class="table-danger">8.5</td>
+            <td data-order="10.43" class="table-danger">10.4</td>
+            <td data-order="27.23" class="">27.2</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8316.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8593</td>
+            <td>三菱HCキャピタル</td>
+            <td>1,454</td>
+            <td data-order="3.24" class="table-danger">3.24%</td>
+            <td data-order="2.38">2.38%</td>
+            <td data-order="3.11">3.11%</td>
+            <td data-order="1.83">1.83%</td>
+            <td data-order="18.46">18.46</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:40)</span>
+              
+            </td>
+            <td data-order="16.95" class="table-danger">16.9</td>
+            <td data-order="37.54" class="">37.5</td>
+            <td data-order="60.48" class="">60.5</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8593.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>8725</td>
+            <td>MS&AD</td>
+            <td>4,135</td>
+            <td data-order="2.98" class="table-danger">2.98%</td>
+            <td data-order="2.54">2.54%</td>
+            <td data-order="3.04">3.04%</td>
+            <td data-order="2.01">2.01%</td>
+            <td data-order="7.68">7.68</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:40)</span>
+              
+            </td>
+            <td data-order="11.11" class="table-danger">11.1</td>
+            <td data-order="31.87" class="">31.9</td>
+            <td data-order="59.53" class="">59.5</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_8725.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9001</td>
+            <td>東武鉄道</td>
+            <td>2,966</td>
+            <td data-order="2.35" class="table-danger">2.35%</td>
+            <td data-order="0.76">0.76%</td>
+            <td data-order="1.31">1.31%</td>
+            <td data-order="0.35">0.35%</td>
+            <td data-order="12.74">12.74</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:42)</span>
+              
+            </td>
+            <td data-order="14.58" class="table-danger">14.6</td>
+            <td data-order="53.44" class="">53.4</td>
+            <td data-order="69.81" class="">69.8</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">鉄道</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9001.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9021</td>
+            <td>JR西日本</td>
+            <td>3,253</td>
+            <td data-order="2.82" class="table-danger">2.82%</td>
+            <td data-order="1.27">1.27%</td>
+            <td data-order="1.68">1.68%</td>
+            <td data-order="0.98">0.98%</td>
+            <td data-order="41.05">41.05</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:18)</span>
+              
+            </td>
+            <td data-order="5.63" class="table-danger">5.6</td>
+            <td data-order="17.67" class="table-danger">17.7</td>
+            <td data-order="42.58" class="">42.6</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9021.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9064</td>
+            <td>ヤマトHD</td>
+            <td>1,814</td>
+            <td data-order="2.54" class="table-danger">2.54%</td>
+            <td data-order="1.11">1.11%</td>
+            <td data-order="1.46">1.46%</td>
+            <td data-order="0.89">0.89%</td>
+            <td data-order="7.86">7.86</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:31)</span>
+              
+            </td>
+            <td data-order="8.33" class="table-danger">8.3</td>
+            <td data-order="16.11" class="table-danger">16.1</td>
+            <td data-order="2.51" class="table-danger">2.5</td>
+            <td>
+              
+                <span class="badge bg-success" title="【A】高配当(254.0%)・PBR割安・RSI底値">A</span>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">陸運</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9064.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9101</td>
+            <td>日本郵船</td>
+            <td>5,511</td>
+            <td data-order="3.71" class="">3.71%</td>
+            <td data-order="6.67">6.67%</td>
+            <td data-order="19.09">19.09%</td>
+            <td data-order="1.74">1.74%</td>
+            <td data-order="4.16">4.16</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:28)</span>
+              
+            </td>
+            <td data-order="57.47" class="">57.5</td>
+            <td data-order="77.85" class="">77.8</td>
+            <td data-order="68.56" class="">68.6</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">海運</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9101.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9104</td>
+            <td>商船三井</td>
+            <td>6,034</td>
+            <td data-order="3.39" class="">3.39%</td>
+            <td data-order="5.64">5.64%</td>
+            <td data-order="15.81">15.81%</td>
+            <td data-order="1.93">1.93%</td>
+            <td data-order="4.03">4.03</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:58)</span>
+              
+            </td>
+            <td data-order="75.67" class="">75.7</td>
+            <td data-order="86.51" class="table-success">86.5</td>
+            <td data-order="85.34" class="table-success">85.3</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                <span class="badge bg-light text-dark me-1">海運</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9104.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9107</td>
+            <td>川崎汽船</td>
+            <td>2,609</td>
+            <td data-order="4.75" class="">4.75%</td>
+            <td data-order="5.24">5.24%</td>
+            <td data-order="12.23">12.23%</td>
+            <td data-order="2.2">2.20%</td>
+            <td data-order="2.38">2.38</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:44)</span>
+              
+            </td>
+            <td data-order="64.3" class="">64.3</td>
+            <td data-order="80.15" class="table-success">80.2</td>
+            <td data-order="77.97" class="">78.0</td>
+            <td>
+              
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                <span class="badge bg-light text-dark me-1">海運</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9107.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9264</td>
+            <td>ポエック</td>
+            <td>1,718</td>
+            <td data-order="4.62" class="table-danger">4.62%</td>
+            <td data-order="3.71">3.71%</td>
+            <td data-order="4.53">4.53%</td>
+            <td data-order="1.87">1.87%</td>
+            <td data-order="19.21">19.21</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:13)</span>
+              
+            </td>
+            <td data-order="14.65" class="table-danger">14.7</td>
+            <td data-order="11.31" class="table-danger">11.3</td>
+            <td data-order="11.42" class="table-danger">11.4</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9264.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9432</td>
+            <td>NTT</td>
+            <td>150</td>
+            <td data-order="3.51" class="table-danger">3.51%</td>
+            <td data-order="1.77">1.77%</td>
+            <td data-order="2.06">2.06%</td>
+            <td data-order="1.53">1.53%</td>
+            <td data-order="55.03">55.03</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:18)</span>
+              
+            </td>
+            <td data-order="17.86" class="table-danger">17.9</td>
+            <td data-order="27.34" class="">27.3</td>
+            <td data-order="9.09" class="table-danger">9.1</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">中配当</span>
+              
+                <span class="badge bg-light text-dark me-1">安定</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9432.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9434</td>
+            <td>ソフトバンク</td>
+            <td>210</td>
+            <td data-order="4.08" class="table-danger">4.08%</td>
+            <td data-order="2.86">2.86%</td>
+            <td data-order="3.65">3.65%</td>
+            <td data-order="2.01">2.01%</td>
+            <td data-order="75.81">75.81</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:13)</span>
+              
+            </td>
+            <td data-order="22.37" class="">22.4</td>
+            <td data-order="32.46" class="">32.5</td>
+            <td data-order="33.33" class="">33.3</td>
+            <td>
+              
+              
+              
+              
+            </td>
+            <td>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9434.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9735</td>
+            <td>セコム</td>
+            <td>5,964</td>
+            <td data-order="1.68" class="table-danger">1.68%</td>
+            <td data-order="1.05">1.05%</td>
+            <td data-order="1.23">1.23%</td>
+            <td data-order="0.9">0.90%</td>
+            <td data-order="0.74">0.74</td>
+            <td>
+              
+                <span class="badge bg-danger">上昇
+(強度:25)</span>
+              
+            </td>
+            <td data-order="35.98" class="">36.0</td>
+            <td data-order="33.11" class="">33.1</td>
+            <td data-order="56.84" class="">56.8</td>
+            <td>
+              
+              
+                <span class="badge bg-warning text-dark" title="【B】需給好転(0.7倍)・上昇トレンド">B</span>
+              
+              
+                <span class="badge bg-info text-dark" title="【C】パーフェクトオーダー">C</span>
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">還元40</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9735.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9861</td>
+            <td>吉野家</td>
+            <td>3,073</td>
+            <td data-order="0.72" class="table-danger">0.72%</td>
+            <td data-order="0.29">0.29%</td>
+            <td data-order="0.36">0.36%</td>
+            <td data-order="0.21">0.21%</td>
+            <td data-order="0.09">0.09</td>
+            <td>
+              
+                <span class="badge bg-secondary">レンジ
+(ADX:17)</span>
+              
+            </td>
+            <td data-order="45.7" class="">45.7</td>
+            <td data-order="33.91" class="">33.9</td>
+            <td data-order="52.06" class="">52.1</td>
+            <td>
+              
+              
+                <span class="badge bg-warning text-dark" title="【B】需給好転(0.1倍)">B</span>
+              
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">外食</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9861.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>9887</td>
+            <td>松屋</td>
+            <td>5,490</td>
+            <td data-order="0.43" class="table-danger">0.43%</td>
+            <td data-order="0.27">0.27%</td>
+            <td data-order="0.34">0.34%</td>
+            <td data-order="0.19">0.19%</td>
+            <td data-order="0.59">0.59</td>
+            <td>
+              
+                <span class="badge bg-primary">下降
+(強度:34)</span>
+              
+            </td>
+            <td data-order="7.25" class="table-danger">7.2</td>
+            <td data-order="3.39" class="table-danger">3.4</td>
+            <td data-order="7.19" class="table-danger">7.2</td>
+            <td>
+              
+              
+                <span class="badge bg-warning text-dark" title="【B】需給好転(0.6倍)">B</span>
+              
+              
+              
+            </td>
+            <td>
+              
+                <span class="badge bg-light text-dark me-1">外食</span>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </td>
+            <td>
+              <a href="stock_9887.html" class="btn btn-sm btn-outline-primary">詳細</a>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <footer class="text-center py-4 text-muted">
+      <small>Generated by Stock List Updater</small><br>
+      <small>
+        <a href="https://github.com/ymd2015/stock_site_updater" target="_blank" rel="noopener">Source on GitHub</a><br>
+        <span>Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a></span><br>
+        <a href="oss_licenses.html" target="_blank" rel="noopener">利用OSSライセンス一覧</a>
+      </small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+<!-- jQuery (DataTablesに必要) -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#stockTable').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.13.4/i18n/ja.json"
+        },
+        "order": [[0, "asc"]], // デフォルトでコード順ソート
+        "pageLength": 50, // 1ページに50件表示
+        "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "すべて"]],
+        "columnDefs": [
+            { "orderable": false, "targets": [2, 10] }, // 現在値、詳細はソート不可
+            { "type": "num", "targets": [3, 4, 6, 7, 8] } // 配当利回り、信用倍率、ストキャスティクスは数値ソート
+        ]
+    });
+});
+</script>
+
+  </body>
+</html>
